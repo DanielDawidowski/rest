@@ -8,6 +8,9 @@
     --grey: #F9F7F2;
     --fsize-1: 56px;
     --fsize-2: 72px;
+    --fsize-3: 20px;
+    --boxShadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
 *, *::before, *::after {
@@ -27,6 +30,7 @@ html {
 body {
     font-family: "Roboto";
     color: var(--black);
+    background: var(--grey);
 }
 
 h1 {
@@ -43,8 +47,8 @@ a {
 }
 
 p {
-    line-height: 30px;
-    font-size: var(--fsize-1);
+    line-height: 40px;
+    font-size: var(--fsize-3);
 }
 
 li {
@@ -61,6 +65,7 @@ button {
     border-radius: 5%;
     cursor: pointer;
     font-weight: bold;
+    font-size: var(--fsize-3);
 }
 
 .main-button {
@@ -128,30 +133,104 @@ button {
     .hero__text h1 {
         font-size: var(--fsize-2);
     }
+
+}
+
+/* ////////////////// HERO  /////////////////*/
+
+/* ////////////////// ABOUT  /////////////////*/
+
+#about {
+    padding-top: 2rem;
+    margin: 1rem;
+    background: var(--grey);
+}
+
+.about__image {
+    position: relative;
+    margin-left: 1rem;
+    background: url("/img/about/about-small.png") no-repeat;
+    background-size: cover;
+    box-shadow: var(--boxShadow);
+    height: 320px;
+    width: 320px;
+    border-radius: 1%;
+}
+
+.about__text h1::before {
+    position: absolute;
+    content: url("/img/about/about-dots.svg");
+    top: 20px;
+    right: -10px;
+}
+
+.about__image .about__icon {
+    position: absolute;
+    top: 60%;
+    left: -5%;
+    width: 85px;
+    height: 85px;
+    border-radius: 5%;
+    border: none;
+    background: #BBA285;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+}
+
+.about__image .about__icon .icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.about__text > * {
+    margin-bottom: 1rem;
+}
+
+.about__text {
+    position: relative;
+    padding-top: 3rem;
+}
+
+@media (min-width: 800px) {
+    #about {
+        margin: 3rem auto; 
+        width: 1700px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .about__image {
+        background: url("/img/about/about-big.png") no-repeat;
+        background-size: cover;
+        height: 570px;
+        width: 570px;
+    }
+
+    .about__text {
+        width: 30%;
+    }
+
+    .about__image .about__icon {
+        width: 170px;
+        height: 170px;
+    }
+
+    .about__image .about__icon .circle {
+        width: 112px;
+        height: 112px;
+    }
+
+    .about__image .about__icon .icon {
+        width: 33px;
+        height: 48px;
+    }
 }
 
 
 
+/* ////////////////// ABOUT  /////////////////*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ////////////////// HERO  /////////////////*/
