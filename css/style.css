@@ -98,7 +98,7 @@ button {
 }
 
 .hero__text > * {
-    margin: 2rem auto;
+    margin: 2rem 0;
 }
 
 .hero__text {
@@ -161,7 +161,7 @@ button {
     position: absolute;
     content: url("/img/about/about-dots.svg");
     top: 20px;
-    right: -10px;
+    right: 10px;
 }
 
 .about__image .about__icon {
@@ -197,7 +197,6 @@ button {
 @media (min-width: 800px) {
     #about {
         margin: 3rem auto; 
-        width: 1700px;
         display: flex;
         justify-content: space-around;
     }
@@ -229,8 +228,108 @@ button {
     }
 }
 
-
-
 /* ////////////////// ABOUT  /////////////////*/
+
+/* ////////////////// OFFERS  /////////////////*/
+
+#offers {
+    margin: 4rem 0;
+    background-color: var(--white);
+}
+
+.offers__text h1 {
+    position: relative;
+    font-size: var(--fsize-1);
+}
+
+.offers__text h1::after {
+    position: absolute;
+    content: url("/img/about/about-dots.svg");
+    top: -70px;
+    right: 10px;
+} 
+
+.offers__text {
+    padding: 4rem 1rem;
+}
+
+
+.offers__item h6 {
+    padding-top: 0.5rem;
+}
+
+.offers__list {
+    margin-top: 3rem;
+}
+
+.offers__list > * {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+.offers__name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offers__image {
+    margin-left: 1rem;
+    width: 346px;
+    height: 340px;
+    background: url("/img/offers/offers-small.png") no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 800px) {
+    #offers {
+        margin: 4rem 0 4rem 2rem;
+        padding: 4rem 0;
+        max-width: 1900px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .offers__image {
+        margin-left: 1rem;
+        width: 560px;
+        height: 570px;
+        background: url("/img/offers/offers-big.png") no-repeat;
+        background-size: cover;
+    }
+
+    .offers__text {
+        max-width: 100%;
+        width: 40%;
+        padding: 4rem 1rem;
+    }
+
+    .offers__item h4 {
+        font-size: var(--fsize-3);
+    }
+
+    .offers__item h6 {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////// OFFERS  /////////////////*/
 
 
