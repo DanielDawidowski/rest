@@ -11,7 +11,7 @@ header .row {
 header .row .logo h2 {
     font-family: "PT+Serif";
     color: var(--white);
-    font-size: var(--fsize-2);
+    font-size: 2rem;
 }
 
 .sr-only {
@@ -192,7 +192,7 @@ nav a {
 
     .main-menu li {
         display: inline-block;
-        font-size: var(--fsize-1);
+        font-size: 20px;
     }
 
     .main-menu li:first-child a {

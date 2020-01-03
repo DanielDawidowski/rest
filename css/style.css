@@ -6,8 +6,8 @@
     --black: #333333;
     --yellow: #F8F7AB;
     --grey: #F9F7F2;
-    --fsize-1: 20px;
-    --fsize-2: 56px;
+    --fsize-1: 56px;
+    --fsize-2: 72px;
 }
 
 *, *::before, *::after {
@@ -32,7 +32,10 @@ body {
 h1 {
     font-family: "PT+Serif";
     font-weight: lighter;
-    font-size: (var(--fsize-1) * 2)
+    font-size: var(--fsize-1);
+}
+h2, h3, h4, h5, h6 {
+    font-weight: lighter;
 }
 
 a {
@@ -53,10 +56,16 @@ button {
     width: 160px;
     height: 48px;
     color: var(--white);
-    background-color: var(--primaryColor);
-    border: 1px solid var(--white);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+    border-radius: 5%;
     cursor: pointer;
     font-weight: bold;
+}
+
+.main-button {
+    background-color: var(--primaryColor);
+    border: none;
 }
 
 /* ////////////////// GLOBAL  /////////////////*/
@@ -72,11 +81,54 @@ button {
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 120vh;
+    color: var(--white);
+}
+
+#hero > * {
+    margin-bottom: 3rem;
+}
+
+.hero__text > * {
+    margin: 2rem auto;
+}
+
+.hero__text {
+    position: relative;
 }
 
 
+.hero__text h1::before {
+    position: absolute;
+    content: url("/img/hero/hero-dots.svg");
+    top: -70px;
+    right: 10px;
+    opacity: 0.4;
+}
+
+.hero__buttons button:not(:first-child) {
+    margin-left: 1rem;
+}
+
+@media (min-width: 800px) {
+    #hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .hero__text {
+        width: 30%;
+    }
+
+    .hero__text h1 {
+        font-size: var(--fsize-2);
+    }
+}
 
 
 
