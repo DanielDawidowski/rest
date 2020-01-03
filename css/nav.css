@@ -1,0 +1,218 @@
+
+header .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+header .row .logo h2 {
+    font-family: "PT+Serif";
+    color: var(--white);
+    font-size: var(--fsize-2);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+#menu-icons {
+    display: none;
+}
+
+.menu-toggle {
+    color: var(--white);
+    margin-right: 1rem;
+}
+
+.menu-toggle .fa-bars {
+    font-size: 2rem;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: var(--white);
+}
+
+.main-menu {
+    position: fixed;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding-top: 2.5em;
+    min-height: 100%;
+    width: 200px;
+    background-color: #1a1a1a;
+}
+
+.menu-icons-nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.main-menu a {
+    display: block;
+    padding: 0.75em;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+}
+
+
+.main-menu a:hover,
+.main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+}
+
+.main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-menu:target {
+    display: block;
+    left: 0;
+    outline: none;
+}
+
+.main-menu:target .menu-close {
+    z-index: 1001;
+}
+
+.main-menu:target ul {
+    position: relative;
+    z-index: 1000;
+}
+
+.main-menu:target + .backdrop {
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.85);
+    cursor: default;
+}
+
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+  
+nav a {
+    display: block;
+    padding: .75rem;
+}
+
+  @media (min-width: 950px) {
+    header, main {
+        border: none;
+        margin: 0;
+    }
+
+    header .row {
+        display: flex;
+        justify-content: space-around;
+        border-radius: 0 0 50px 50px;
+      }  
+
+    nav {
+        padding: 1rem 0.5rem;
+    }
+
+    #menu-icons {
+        margin-top: 1rem;
+        display: block;
+    }
+
+    #menu-icons img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: -10px;
+    }
+    
+    #menu-icons a {
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+
+    #menu-icons a:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .menu-icons-nav {
+        display: none;
+    }
+
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    .main-menu {
+        position: static;
+        display: block;
+    }
+
+    .main-menu ul {
+        padding: 0;
+        height: auto;
+        width: auto;
+        background: none;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .main-menu li {
+        display: inline-block;
+        font-size: var(--fsize-1);
+    }
+
+    .main-menu li:first-child a {
+        border-top: none;
+    }
+
+    .main-menu a {
+        border-bottom: none;
+        display: inline;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: none;
+        color: var(--yellow);
+        text-decoration: none;
+    }
+
+    nav ul {      
+      text-align: center;
+    }
+
+  }

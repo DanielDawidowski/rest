@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif|Roboto:400,700&display=swap');
+
+:root {
+    --primaryColor: #583EBC;
+    --white: #FFFFFF;
+    --black: #333333;
+    --yellow: #F8F7AB;
+    --grey: #F9F7F2;
+    --fsize-1: 20px;
+    --fsize-2: 56px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto";
+    color: var(--black);
+}
+
+h1 {
+    font-family: "PT+Serif";
+    font-weight: lighter;
+    font-size: (var(--fsize-1) * 2)
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 30px;
+    font-size: var(--fsize-1);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    padding: 8px;
+    width: 160px;
+    height: 48px;
+    color: var(--white);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ////////////////// GLOBAL  /////////////////*/
+
+/* ////////////////// HERO  /////////////////*/
+
+
+ #hero {
+    position: relative;
+    height: calc(100vh - 60px);
+    padding: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.27), #000), url('/img/hero/hero-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    height: 120vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////// HERO  /////////////////*/
