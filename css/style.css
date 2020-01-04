@@ -635,13 +635,113 @@ section {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* ////////////////// PRESS  /////////////////*/
+
+/* ////////////////// CHEF  /////////////////*/
+#chef {
+    padding: 1rem;
+}
+
+.chef__image {
+    position: relative;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    background: url("/img/chef/chef-small.png") no-repeat;
+    background-size: cover;
+    box-shadow: var(--boxShadow);
+    height: 320px;
+    width: 320px;
+    border-radius: 1%;
+}
+
+.chef__image .about__icon {
+    position: absolute;
+    top: 60%;
+    left: -5%;
+    width: 85px;
+    height: 85px;
+    border-radius: 5%;
+    border: none;
+    background: #BBA285;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+}
+
+.chef__image .about__icon .circle {
+    position: absolute;
+}
+
+.chef__image .about__icon .icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.chef__text > * {
+    margin-bottom: 1rem;
+}
+
+.chef__text {
+    position: relative;
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+.chef__text h3 {
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+@media (min-width: 950px) {
+    #chef {
+        margin: 3rem auto; 
+        display: flex;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+
+    .chef__image {
+        background: url("/img/chef/chef-big.png") no-repeat;
+        background-size: cover;
+        height: 570px;
+        width: 570px;
+    }
+
+    .chef__text {
+        width: 30%;
+    }
+
+    .chef__image .about__icon {
+        width: 170px;
+        height: 170px;
+        max-width: 100%;
+    }
+
+    .chef__image .about__icon .circle {
+        width: 112px;
+        height: 112px;
+    }
+
+    .chef__image .about__icon .icon {
+        width: 53px;
+        height: 48px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////// CHEF  /////////////////*/
