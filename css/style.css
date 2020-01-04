@@ -444,6 +444,7 @@ section {
 }
 
 .card__text {
+    position: relative;
     background: var(--white);
     color: var(--black);
     padding: 1rem;
@@ -459,6 +460,13 @@ section {
 
 .card__text > * {
     margin-bottom: 1rem;
+}
+
+.card__text::before {
+    position: absolute;
+    content: url("/img/events/events-dots.svg");
+    bottom: -40px;
+    right: 20px;
 }
 
 @media (min-width: 800px) { 
@@ -480,6 +488,44 @@ section {
     .card__text > * {
         margin: 25px;
     }
+
+    .card__text::before {
+        position: absolute;
+        content: url("/img/events/events-dots.svg");
+        bottom: -40px;
+        right: -40px;
+    }
+}
+
+/* ////////////////// EVENTS  /////////////////*/
+
+/* ////////////////// GALLERY  /////////////////*/
+
+#gallery {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.gallery__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+}
+
+.gallery__images {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    max-width: 1200px;
+}
+
+.gallery__images img {
+    margin-bottom: 1rem;
 }
 
 
@@ -490,12 +536,5 @@ section {
 
 
 
-
-
-
-
-
-/* ////////////////// EVENTS  /////////////////*/
-
-
+/* ////////////////// GALLERY  /////////////////*/
 
