@@ -354,7 +354,7 @@ section {
 .lunch__item {
     display: flex;
     padding: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.11);
 }
 
@@ -363,7 +363,7 @@ section {
     justify-content: center;
     flex-direction: column;
     padding-left: 1rem;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .lunch__discription {
@@ -401,23 +401,101 @@ section {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ////////////////// LUNCH  /////////////////*/
+
+/* ////////////////// EVENTS  /////////////////*/
+
+#events {
+    margin: 2rem 0;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.events__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+}
+
+.events__text h1 {
+    font-size: 40px;
+}
+
+.event__card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.card__img {
+    background: url("/img/events/events-small.png") no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 350px;
+}
+
+.card__text {
+    background: var(--white);
+    color: var(--black);
+    padding: 1rem;
+}
+
+.card__text h2 {
+    font-size: 40px;
+}
+
+.card__text button {
+    margin: 1rem;
+}
+
+.card__text > * {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) { 
+    .event__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 500px;
+        max-width: 1200px;
+        margin-bottom: 6rem;
+    }
+
+    .card__img {
+        background: url("/img/events/events-big.png") no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 500px;
+    }
+
+    .card__text > * {
+        margin: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////// EVENTS  /////////////////*/
 
 
 
