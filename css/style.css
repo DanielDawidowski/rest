@@ -367,7 +367,6 @@ section {
     justify-content: center;
     flex-direction: column;
     padding-left: 1rem;
-    /* width: 400px; */
 }
 
 .lunch__discription {
@@ -735,7 +734,7 @@ section {
 /* ////////////////// CONTACT  /////////////////*/
 
 #contact {
-    margin: 3rem auto;
+    margin: 3rem 0 auto;
     padding: 5rem 1rem;
     background: var(--white);
 }
@@ -816,9 +815,57 @@ form button {
     }
 }
 
-
-
-
-
-
 /* ////////////////// CONTACT  /////////////////*/
+
+/* ////////////////// FOOTER  /////////////////*/
+
+#footer {
+    padding: 3rem 1rem;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer > * {
+    margin-bottom: 1.5rem;
+}
+
+.footer__nav a{
+    color: var(--white);
+}
+
+.footer__nav li {
+    margin-bottom: 1rem;
+}
+
+.footer__social {
+    display: flex;
+}
+
+.footer__social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__social li:not(:last-child) {
+    margin-right: 1.6rem;
+}
+
+
+@media (min-width: 900px) { 
+    .footer__nav {
+        display: flex;
+        padding-bottom: 1.2rem;
+    }
+
+    .footer__nav li:not(:last-child) {
+        margin-right: 2rem
+    }
+}
+
+
+/* ////////////////// FOOTER  /////////////////*/
+
