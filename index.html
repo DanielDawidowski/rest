@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
-    <title>Document</title>
+    <title>Restaurant</title>
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -329,6 +329,81 @@
             </ul>
             <h4>2019 Restaurant. All Rights Reserved.</h4>
         </footer>
+        <div id="backdrop"></div>
+        <div class="modal card" id="add-modal">
+            <ul class="modal__list">
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Huitlacoche <span>$14.00</span></h4>
+                        <h6>Served pickled ginger and chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Creole Tempeh<span>$19.00</span></h4>
+                        <h6>Served with soy sauce, wasabi, pickled  chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Polenta Nera Cake<span>$13.00</span></h4>
+                        <h6>Served with soy sauce, wasabi, pickled ginger</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Mediterranean Salad<span>$17.00</span></h4>
+                        <h6>Soy sauce, wasabi, pickled ginger and chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Pumpkin Curry<span>$22.00</span></h4>
+                        <h6>Sauce, wasabi, pickled ginger and chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Warm Kipfler<span>$24.00</span></h4>
+                        <h6>Wasabi, pickled ginger and chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Polish Pierogi<span>$22.00</span></h4>
+                        <h6>Soy sauce, wasabi, pickled ginger and chopsticks</h6>
+                    </div>
+                </li>
+                <li class="modal__item">
+                    <img src="/img/lunch/lunch.png" alt="lunch">
+                    <div class="modal__name">
+                        <h4 class="modal__discription">Hot Wings <span>$14.00</span></h4>
+                        <h6>Served with soy sauce, wasabi, pickled ginger</h6>
+                    </div>
+                </li>
+            </ul>
+            <div class="modal__actions">
+                <button class="main-button close">Close</button>
+            </div>
+        </div>
+        <div class="modal card" id="delete-modal">
+        <h2 class="modal__title">Are you sure?</h2>
+        <p class="modal__content">
+            Are you sure you want to delete this item? This action can't be made
+            undone!
+        </p>
+        <div class="modal__actions">
+            <button class="btn btn--passive">No (Cancel)</button>
+            <button class="btn btn--danger">Yes</button>
+        </div>
+        </div>
         <!-- commit -->
     </main>
 </body>
