@@ -1078,10 +1078,18 @@ form button {
     border-radius: 10px;
 }
 
+.modal__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
 .modal__item {
     display: flex;
-    /* margin-bottom: 4px; */
     padding: 0.2rem;
+    max-width: 250px;
 }
   
 .modal__item img {
@@ -1094,7 +1102,7 @@ form button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-width: 240px;
+    min-width: 200px;
 }
 
 
@@ -1115,16 +1123,29 @@ form button {
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     .modal {
-      width: 40rem;
+      width: 60rem;
       height: 40rem;
-      left: calc(50% - 20rem);
+      left: calc(50% - 30rem);
+    }
+
+    .modal__list {
+        margin: 1rem auto;
+        padding: 1rem 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal__item {
+        max-width: 300px;
+        padding-bottom: 3rem;
     }
 
     .modal__item img {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
+    
 }
 /* ////////////////// MODAL  /////////////////*/
