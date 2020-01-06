@@ -551,12 +551,7 @@ section {
         margin: 25px;
     }
 
-    .card__text::before {
-        position: absolute;
-        content: url("/img/events/events-dots.svg");
-        bottom: -40px;
-        right: -40px;
-    }
+
 }
 
 /* ////////////////// EVENTS  /////////////////*/
