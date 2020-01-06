@@ -44,6 +44,7 @@ h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+    color: var(--white);
 }
 
 p {
@@ -445,7 +446,7 @@ section {
 
     .lunch__list {
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1400px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -454,10 +455,29 @@ section {
         border-bottom: none;
     }
 
+    .lunch__name {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 1rem;
+        min-width: 260px;
+    }
+
     .lunch__discription {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
+        font-size: var(--fsize-3);
+    }
+
+    .lunch__name h6 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .lunch__name { 
+        min-width: 360px;
     }
 }
 
@@ -516,6 +536,7 @@ section {
 }
 
 .card__text button {
+    color: var(--white);
     margin: 1rem;
 }
 
@@ -574,10 +595,9 @@ section {
 
 .gallery__images {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     max-width: 1200px;
 }
@@ -585,6 +605,18 @@ section {
 .gallery__images img {
     margin-bottom: 1rem;
     box-shadow: var(--boxShadow);
+}
+
+@media (min-width: 800px) { 
+    .gallery__images {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
+        justify-content: center;
+        max-width: 1200px;
+    }
 }
 
 /* ////////////////// GALLERY  /////////////////*/
@@ -729,6 +761,10 @@ section {
 /* ////////////////// CHEF  /////////////////*/
 #chef {
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .chef__image {
@@ -776,6 +812,10 @@ section {
     position: relative;
     margin-top: 3rem;
     padding-top: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .chef__text h3 {
@@ -783,10 +823,11 @@ section {
     font-weight: 700;
 }
 
-@media (min-width: 950px) {
+@media (min-width: 800px) {
     #chef {
         margin: 3rem auto; 
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         max-width: 100%;
     }
@@ -794,8 +835,8 @@ section {
     .chef__image {
         background: url("/img/chef/chef-big.png") no-repeat;
         background-size: cover;
-        height: 570px;
-        width: 570px;
+        height: 400px;
+        width: 400px;
     }
 
     .chef__text {
@@ -818,6 +859,14 @@ section {
         height: 48px;
     }
 }
+@media (min-width: 1000px) {
+    .chef__image {
+        background: url("/img/chef/chef-big.png") no-repeat;
+        background-size: cover;
+        height: 570px;
+        width: 570px;
+    }
+}
 
 /* ////////////////// CHEF  /////////////////*/
 
@@ -827,6 +876,11 @@ section {
     margin: 3rem 0 auto;
     padding: 5rem 1rem;
     background: var(--white);
+    box-shadow: var(--boxShadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact__text {
@@ -876,8 +930,9 @@ form button {
 .contact__img {
     background: url("/img/reserve/reserve-small.png") no-repeat;
     background-size: cover;
-    max-width: 100%;
-    height: 400px;
+    height: 320px;
+    width: 320px;
+    border-radius: 1%;
     box-shadow: var(--boxShadow);
 }
 
@@ -893,8 +948,8 @@ form button {
     .contact__img {
         background: url("/img/reserve/reserve-big.png") no-repeat;
         background-size: cover;
-        max-width: 100%;
-        height: 560px;
+        height: 400px;
+        width: 400px;
         box-shadow: var(--boxShadow);
     }
 
@@ -902,6 +957,15 @@ form button {
     option,
     input {
         max-width: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contact__img {
+        background: url("/img/reserve/reserve-big.png") no-repeat;
+        background-size: cover;
+        height: 570px;
+        width: 570px;
     }
 }
 

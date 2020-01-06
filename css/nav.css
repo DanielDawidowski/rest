@@ -146,6 +146,12 @@ nav a {
         display: flex;
         justify-content: space-around;
     }  
+
+    header .row .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     .fixed-nav {
          background: rgba(145, 123, 51, 0.329); 
@@ -161,16 +167,10 @@ nav a {
     }
 
     #menu-icons img {
-        width: 30px;
-        height: 30px;
-        margin-bottom: -10px;
+        width: 25px;
+        height: 25px;
     }
     
-    #menu-icons a {
-        padding: 20px;
-        border: 1px solid white;
-        border-radius: 50%;
-    }
 
     #menu-icons a:not(:last-child) {
         margin-right: 1rem;
