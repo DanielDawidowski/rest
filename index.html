@@ -52,8 +52,7 @@
                 <h1>Welcome to our restaurant</h1>
                 <h3>Everyday 8:00 am - 23:00 pm</h3>
                 <div class="hero__buttons">
-                    <button class="main-button">Book a table</button>
-                    <button>See menu</button>
+                    <button class="main-button"><a href="#contact">Book a table</a></button>
                 </div>
             </div>
             <div class="hero__img"></div>
@@ -147,7 +146,7 @@
                 </li>
             </ul>
             <div class="lunch__menu">
-                <button class="main-button">Full menu</button>
+                <button class="menu main-button">Full menu</button>
             </div>
         </section>
         <section id="events">
@@ -173,13 +172,63 @@
                 <h3>Gallery</h3>
                 <h1>Our Interior</h1>
             </div>
-            <div class="gallery__images">
-                <img src="/img/gallery/small-1.png" alt="f1">
-                <img src="/img/gallery/small-2.png" alt="f2">
-                <img src="/img/gallery/small-3.png" alt="f3">
-                <img src="/img/gallery/small-4.png" alt="f4">
-                <img src="/img/gallery/small-5.png" alt="f5">
-                <img src="/img/gallery/small-6.png" alt="f6">
+            <div class="gallery-items">
+                <div class="gallery-item">
+                    <img src="img/gallery/small-1.png" alt="f1">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery/small-2.png" alt="f2">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery/small-3.png" alt="f3">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery/small-4.png" alt="f4">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery/small-5.png" alt="f5">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery/small-6.png" alt="f6">
+                    <div class="overlay">
+                        <h2>Gallery</h2>
+                        <span class="far fa-eye"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lightbox-big">
+                <div class="lightbox-content">
+                    <div class="lightbox-close">&times;</div>
+                    <img src="" class="lightbox-img" alt="f1" onclick="next()">
+                    <div class="lightbox-caption">
+                        <span class="lightbox-text"></span>
+                        <span class="lightbox-counter"></span>
+                    </div>
+                </div>
+                <div class="lightbox-controls">
+                    <div class="prev" onclick="prev()"><</div>
+                    <div class="next" onclick="next()">></div>
+                </div>
             </div>
         </section>
         <section id="testimonials">
@@ -393,17 +442,7 @@
                 <button class="main-button close">Close</button>
             </div>
         </div>
-        <div class="modal card" id="delete-modal">
-        <h2 class="modal__title">Are you sure?</h2>
-        <p class="modal__content">
-            Are you sure you want to delete this item? This action can't be made
-            undone!
-        </p>
-        <div class="modal__actions">
-            <button class="btn btn--passive">No (Cancel)</button>
-            <button class="btn btn--danger">Yes</button>
-        </div>
-        </div>
+
         <!-- commit -->
     </main>
 </body>

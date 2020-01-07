@@ -62,7 +62,7 @@ img {
 
 button {
     padding: 8px;
-    width: 140px;
+    width: 170px;
     height: 48px;
     color: var(--white);
     background: transparent;
@@ -75,7 +75,7 @@ button {
 
 .main-button {
     background-color: var(--primaryColor);
-    border: none;
+    border: 1px solid var(--white);
 }
 
 section {
@@ -90,7 +90,7 @@ section {
  #hero {
     position: relative;
     height: calc(100vh - 60px);
-    padding: 0 0.4rem;
+    padding: 0 1rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.27), #000), url('/img/hero/hero-bg.png');
     background-size: cover;
     background-attachment: fixed;
@@ -155,8 +155,17 @@ section {
         justify-content: space-around;
         padding: 1rem;
     }
+
     .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 30%;
+    }
+
+    .hero__text > * {
+        margin: 1rem 0;
     }
 
     .hero__text h1 {
@@ -580,9 +589,13 @@ section {
 /* ////////////////// GALLERY  /////////////////*/
 
 #gallery {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .gallery__text {
     display: flex;
@@ -593,29 +606,182 @@ section {
     padding: 2rem 0;
 }
 
-.gallery__images {
-    margin: 0 auto;
+.gallery-items {
+    flex-basis: 100%;
+    max-width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.gallery__images img {
-    margin-bottom: 1rem;
+.gallery-items .gallery-item {
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10%;
     box-shadow: var(--boxShadow);
 }
 
-@media (min-width: 800px) { 
-    .gallery__images {
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 1rem;
-        justify-content: center;
-        max-width: 1200px;
+.gallery-items .gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-items .gallery-item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(165, 158, 142, 0.918);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5);
+    border-radius: 5%;
+    box-shadow: var(--boxShadow);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.gallery-items .gallery-item:hover .overlay {
+    transform: scale(0.9);
+    opacity: 1;
+}
+
+
+.gallery-items .gallery-item .overlay h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.gallery-items .gallery-item .overlay .far {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #000000;
+    background-color: rgba(204, 203, 201, 0.918);
+    cursor: pointer;
+}
+
+.lightbox-big {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    padding:0 10px;
+}
+
+.lightbox-big.open {
+    display: flex;
+}
+
+.lightbox-big .lightbox-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    padding: 40px 0;
+    cursor: pointer;
+    animation: lightImage .5s ease;
+}
+
+@keyframes lightImage {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lightbox-big .lightbox-content {
+    position: relative;
+}
+
+.lightbox-big .lightbox-close {
+    position: absolute;
+    z-index: 101;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.lightbox-big .lightbox-caption {
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.lightbox-big .lightbox-controls div{
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lightbox-big .lightbox-controls div:hover {
+    background-color: #ffffff;
+}
+
+.lightbox-big .lightbox-controls div.prev {
+    left: 30px;
+}
+
+.lightbox-big .lightbox-controls div.next {
+    right: 30px;
+}
+
+@media(max-width: 900px) {
+    .gallery-items .gallery-item {
+        flex-basis: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media(max-width: 575px) {
+    .gallery-items .gallery-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .lightbox-big .lightbox-controls div{
+        position: absolute;
+        top: 60%;
+        background-color: #ffffff;
     }
 }
 
