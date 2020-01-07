@@ -47,6 +47,10 @@ a {
     color: var(--white);
 }
 
+a:hover{
+    color: var(--primaryColor);
+}
+
 p {
     line-height: 40px;
     font-size: var(--fsize-3);
@@ -60,22 +64,28 @@ img {
     max-width: 100%;
 }
 
-button {
+.main-button {
     padding: 8px;
-    width: 170px;
-    height: 48px;
     color: var(--white);
-    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.178);
     border-radius: 5%;
     cursor: pointer;
     font-weight: bold;
     font-size: var(--fsize-3);
-}
-
-.main-button {
     background-color: var(--primaryColor);
     border: 1px solid var(--white);
+    transform: scale(1);
+    color: var(--white);
+    width: 170px;
+    height: 48px;
+}
+
+.main-button:hover {
+    background-color: var(--white);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    transition: all .4s ease-in-out;
+    transform: scale(1.1);
 }
 
 section {
@@ -801,76 +811,174 @@ section {
     margin-bottom: 3rem;
 }
 
-.testimonials__card {
+
+.carousel {
+    width: 90%;
+    height: 700px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+}
+
+.carousel__image {
+    padding-bottom: 20px;
+    z-index: 10;
+}
+
+.carousel__image::before {
+    position: absolute;
+    content: url("/img/testimonials/testimonials-dots.svg");
+    top: -200px;
+}
+
+.carousel__track-container {
     background: var(--white);
-    padding: 2rem;
-    max-width: 1170px;
-    box-shadow: var(--boxShadow);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--black);
 }
 
-.testimonials__card > * {
-    margin-bottom: 10px;
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
 }
 
-.testimonials__card img {
-    padding: 2rem 0;
-    z-index: 1;
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.testimonials__card p::before {
+.carousel__slide p {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+.carousel__slide p::before {
     position: absolute;
     content: url("/img/testimonials/testimonials-dots.svg");
     top: -200px;
     left: 40%;
+} 
+
+.carousel__slide h3 {
+    font-weight: bold;
 }
 
-.testimonials__card p {
-    position: relative;
-    padding: 1rem 2rem;
-    text-align: center;
-}
-
-.testimonials__card h3 {
-    font-weight: 700;
+.carousel__slide h5 {
+    padding-bottom: 2rem;
 }
 
 .fa-star {
+    margin-top: 3rem;
+    padding: 1rem 0;
     color: #BBA285;
 }
 
-.arrow-left,
-.arrow-right {
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--boxShadow);
+    z-index: 10;
+}
+
+.carousel__button--left {
+    left: -20px;
+}
+
+.carousel__button--right {
+    right: -20px;
+}
+
+.carousel__button img {
+    width: 10px;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    margin: 0 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(202, 202, 202, 0.137);
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.is-hidden {
     display: none;
 }
 
-@media (min-width: 950px) {
-    .testimonials__card {
-        position: relative;
+@media (min-width: 850px) {
+    .carousel {
+        width: 60%;
     }
 
-    .arrow-left,
-    .arrow-right {
-        display: block;
-        position: absolute;
-        bottom: 45%;
+    .carousel__image {
+        padding-bottom: 30px;
     }
 
-    .arrow-left {
-        left: 15px;
-    }
-
-    .arrow-right {
-        right: 15px;
-    }
-
-    .arrow-left i,
-    .arrow-right i {
+    .carousel__button {
         font-size: 30px;
+    }
+
+    .carousel__button--left {
+        left: -120px;
+    }
+    
+    .carousel__button--right {
+        right: -120px;
+    }
+    
+    .carousel__button img {
+        width: 80px;
+    }
+
+    .carousel__slide p {
+        font-size: 24px;
+        padding: 10px 26px;
+    }
+    
+    .carousel__slide h3 {
+        font-weight: bold;
+        font-size: 24px;
+        padding-top: 10px;
+    }
+    
+    .carousel__slide h5 {
+        font-size: 16px;
+    }
+    
+    .fa-star {
+        padding: 1rem 0;
+        color: #BBA285;
     }
 }
 
